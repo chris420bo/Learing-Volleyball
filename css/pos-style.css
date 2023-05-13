@@ -1,0 +1,110 @@
+.container {
+	padding: 124px 140px 60px;
+	display: grid;
+	row-gap: 3vh;
+}
+
+.container .content-boxR {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	gap: 1vw;
+}
+
+.container .content-boxR #right{
+	justify-self: right;
+}
+
+.container .content-boxL {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 1vw;
+}
+
+.container .content-boxL #left {
+	justify-self: left;
+}
+
+.container .content-boxL > img,
+.container .content-boxR >img {
+	align-self: center;
+	width: 15vw;
+	opacity: 0.5;
+	z-index: 2;
+}
+
+.container .content-boxL #contentR,
+.container .content-boxR #contentL {
+	align-self: center;
+	margin: 0vw 20px;
+	display: flex;
+	align-items: center;
+}
+
+.container .content-boxL #contentR #position {
+	--c: rgb(172,171,202);
+}
+
+.container .content-boxR #contentL #position {
+	--c: rgb(245,171,171);
+}
+
+.container .content-boxL #contentR #position,
+.container .content-boxR #contentL #position{
+	line-height: 1.2em;
+	background:
+	conic-gradient(from 245deg at 100%  100%,var(--c) 90deg,#0000 0) 
+	  0    var(--p,0%)/var(--s,0%) 100% no-repeat,
+	conic-gradient(from 245deg at 1.2em 100%,#0000 90deg,var(--c) 0) 
+	  100% var(--p,0%)/var(--s,0%) 100% no-repeat;
+	transition: .4s ease-in, background-position 0s;
+}
+
+.container .content-boxL #contentR:hover #position,
+.container .content-boxR #contentL:hover #position{
+	--p: 100%;
+	--s: calc(50% + .61em);
+}
+
+.container .content-boxL #contentR {
+	justify-self: right;
+}
+
+.container .content-boxR #contentL {
+	justify-self: left;
+}
+
+.container .content-boxL #contentR > h1,
+.container .content-boxR #contentL > h1 {
+	font-family: "Surt Extended";
+	font-size: 2.5vw;
+	cursor:	default;
+}
+
+.container .content-boxL #contentR > p,
+.container .content-boxR #contentL > p {
+	margin: 0 40px;
+	padding: 40px;
+	border-radius: 10px;
+	font-size: 1.25vw;
+	color: transparent;
+	cursor:	default;
+	transition: 0.5s;
+}
+
+.container .content-boxL #contentR > p {
+	background-color: rgba(89,88,149,0.5);
+}
+
+.container .content-boxR #contentL > p {
+	background-color: rgba(236,88,88,0.5);
+}
+
+.container .content-boxL #contentR:hover > p {
+	background-color: rgba(89,88,149,0.5);
+	color: #000000;
+}
+
+.container .content-boxR #contentL:hover > p {
+	background-color: rgba(236,88,88,0.5);
+	color: #000000;
+}

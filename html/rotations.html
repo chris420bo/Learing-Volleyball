@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Volleyball Rotations</title>
+	<link rel="stylesheet" type="text/css" href="../fonts/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/rot-style.css">
+</head>
+<body>
+	<div class="header">
+		<div class="nav">
+			<a href="positions.html">Positions</a>
+			<a href="fundamentals.html">Fundamentals</a>
+			<a href="rotations.html">Rotations</a>
+		</div>
+		<div class="logo">
+			<a href="../index.html"><img src="../img/Volleyball Logo.png"></a>
+		</div>
+	</div>
+	<h1 class="title">The two most common rotations in volleyball are a 5-1 or 6-2. Click on one of the sections bellow to learn more!</h1>
+	<div class="container">
+		<div class="left">
+			<div class="content">
+				<img src="../img/5-1 Formation.png" class="5-1">
+				<div class="description">
+					<h1>The 5-1 Rotation</h1>
+					<p><br>This rotation is a system where a team utilizes a single designated setter and five hitters. In this rotation, the setter always sets no matter if they are in the front-row or back-row, while the other players alternate between front-row and back-row positions. This rotation is commonly used when a team has a skilled setter who can effectively distribute the ball and run the offense allowing for a more consistant look for the hitters.<br><br>
+
+					For this system, the positions are as follows:<br><br>
+
+					Setters: There is only on setter in this rotation typically labeled as "S". This setter rotates around the whole court and runs the offense for the entire game. They set no matter if they are front-row or back-row.<br><br>
+
+					Opposite Hitter: There is one opposite hitter, also known as the right-side hitter, positioned on the right side of the court. They are typically labeled as "OH" and are always opposite of the setter in the rotation.<br><br>
+
+					Outside Hitters: There are two outside hitters, also known as left-side hitters, positioned on the left side of the court. They are typically labeled as "OH1" and "OH2" and will still remain attacking options even when in the back-row<br><br>
+
+					Middle Blockers: There are two middle blockers positioned in the middle of the court, flanking the setter. They are typically labeled as "MB1" and "MB2" and will be replaced by the libero when they rotate into the back-row.<br><br>
+
+					Libero: The libero is a specialized defensive player who wears a different colored jersey. They are typically labeled as LB and will sub in for the middle blockers when they rotate into the back-row.<br><br>
+
+					<strong>Hover over the image to view how serve receive would work!</strong>
+					</p>
+				</div>
+			</div>
+			<div class="label">5-1</div>
+		</div>
+		<div class="right">
+			<div class="content">
+				<img src="../img/6-2 Formation.png" class="6-2">
+				<div class="description">
+					<h1>The 6-2 Rotation</h1>
+					<p><br>This rotation is a system where a team utilizes two setters and six hitters. In this rotation, there are always three front-row players and three back-row players. The two setters alternate positions, with one setting from the front row while the other sets from the back row. This allows for more offensive options and flexibility, as there are always three attackers available in the front row. The 6-2 rotation is commonly used when a team has setters who are skilled both in setting and attacking, providing a balanced and dynamic offensive approach.<br><br>
+
+					For this system, the positions are as follows:<br><br>
+
+					Setters: There are two setters in the rotation, typically labeled as "S1" and "S2". One setter is positioned in the front-row while the other is in the back-row with the setter in the back-row running the offense while the setter in the front row is an attacking option. This is a huge reason why this rotation requires two setters that are skilled in both setting and hitting as their position is more fluid than a traditional setter.<br><br>
+
+					Outside Hitters: There are two outside hitters, also known as left-side hitters, positioned on the left side of the court. They are typically labeled as "OH1" and "OH2" and will still remain attacking options even when in the back-row<br><br>
+
+					Middle Blockers: There are two middle blockers positioned in the middle of the court, flanking the setter. They are typically labeled as "MB1" and "MB2" and will be replaced by the libero when they rotate into the back-row.<br><br>
+
+					Libero: The libero is a specialized defensive player who wears a different colored jersey. They are typically labeled as LB and will sub in for the middle blockers when they rotate into the back-row.<br><br>
+
+					<strong>Hover over the image to view how serve receive would work!</strong></p>
+				</div>
+			</div>
+			<div class="label">6-2</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		var leftExpanded = false;
+		var rightExpanded = false;
+		var leftContent = document.getElementsByClassName("left")[0];
+		var rightContent = document.getElementsByClassName("right")[0];
+
+		leftContent.addEventListener("click", function expandLeft() {
+			console.log("I'm here");
+			if (!leftExpanded && !rightExpanded) {
+				leftContent.classList.add("expanded");
+				rightContent.style.flexGrow = 0;
+				rightContent.style.opacity = 0.25;
+				leftExpanded = true;
+			}
+			else if (!leftExpanded && rightExpanded) {
+				leftContent.classList.add("expanded");
+				rightContent.classList.remove("expanded");
+				leftContent.style.flexGrow = 1;
+				leftContent.style.opacity = 1;
+				rightContent.style.flexGrow = 0;
+				rightContent.style.opacity = 0.25;
+				leftExpanded = true;
+				rightExpanded = false;
+			}
+			else {
+				leftContent.classList.remove("expanded");
+				rightContent.style.flexGrow = 1;
+				rightContent.style.opacity = 1;
+				leftExpanded = false;
+			}
+		});
+
+		rightContent.addEventListener("click", function expandRight () {
+			if (!leftExpanded && !rightExpanded) {
+				rightContent.classList.add("expanded");
+				leftContent.style.flexGrow = 0;
+				leftContent.style.opacity = 0.25;
+				rightExpanded = true;
+			}
+			else if (leftExpanded && !rightExpanded) {
+				leftContent.classList.remove("expanded");
+				rightContent.classList.add("expanded");
+				rightContent.style.flexGrow = 1;
+				rightContent.style.opacity = 1;
+				leftContent.style.flexGrow = 0;
+				leftContent.style.opacity = 0.25;
+				leftExpanded = false;
+				rightExpanded = true;
+			}
+			else {
+				rightContent.classList.remove("expanded");
+				leftContent.style.flexGrow = 1;
+				leftContent.style.opacity = 1;
+				rightExpanded = false
+			}
+		});
+
+	</script>
+</body>
+</html>

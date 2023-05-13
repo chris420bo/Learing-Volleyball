@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Surt Expanded';
+    src: url('surt-expanded-regular-trial-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Surt Extended';
+    src: url('surt-extended-regular-trial-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Surt';
+    src: url('surt-normal-regular-trial-webfont.woff') format('woff');
+}

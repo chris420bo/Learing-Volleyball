@@ -1,0 +1,119 @@
+.title {
+	padding-top: 84px;
+	padding: 104px 25vw 20px;
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+.container {
+	display: flex;
+	height: 91vh;
+	overflow: hidden;
+}
+
+.left, .right {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	transition: flex-grow 0.5s;
+}
+
+.container .left {
+	background-color: rgb(171,171,202);
+}
+
+.container .left:hover {
+	background-color: rgb(104,104,159);
+}
+
+.container .right {
+	background-color: rgb(245,171,171);
+}
+
+.container .right:hover {
+	background-color: rgb(238,104,104);
+}
+
+.left.expanded .label,
+.right.expanded .label {
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.left.expanded .content {
+	opacity: 1;
+	background-color: #FFFFFF;
+}
+
+.right.expanded .content {
+	opacity: 1;
+	background-color: #FFFFFF;
+}
+
+.label {
+	font-size: 5vw;
+	padding: 20px;
+}
+
+.content {
+	padding: 0 20px;
+	font-size: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: opacity 0.5s;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	justify-items: center;
+	align-items: center;
+}
+
+.content > img {
+	width: 30vw;
+	height: auto;
+}
+
+.left.expanded .content > img:hover {
+	content: url("../img/5-1 Receive.png");
+}
+
+.right.expanded .content > img:hover {
+	content: url("../img/6-2 Receive.png");
+}
+
+.description {
+	width: 95%;
+	height: 91%;
+	margin: 2vw;
+	padding: 1.45vw;
+	border-radius: 10px;
+	justify-self: start;
+	align-self: start;
+}
+
+.left.expanded .content .description {
+	background-color: rgb(104,104,159);
+
+}
+
+.right.expanded .content .description {
+	background-color: rgb(238,104,104);
+}
+
+.description > h1 {
+	font-family: "Surt Expanded";
+	font-size: 2.15vw;
+}
+
+.description > p {
+	font-size: 1.05vw;
+}
