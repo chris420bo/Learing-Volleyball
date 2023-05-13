@@ -1,4 +1,95 @@
 .container {
 	padding: 124px 140px 60px;
-	grid-template-rows: ;
+	height: 65vh;
+	background-image: url("../img/Court Background 2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	grid-template-rows: 51.5vh 1fr;
+	align-items: center;
+	justify-items: center;
+}
+
+.content-box, .welcome {
+	padding: 9.5vh 4vw;
+	text-align: center;
+}
+
+.welcome .content {
+	color: #FFFFFF;
+}
+
+.welcome .content > h1 {
+	font-family: "Surt Extended";
+	font-size: 4vw;
+	margin: 1vw;
+}
+
+.welcome .content > h2 {
+	font-family: "Surt Expanded";
+	font-size: 2vw;
+}
+
+.content-box {
+	cursor: pointer;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.content-box .content {
+	margin: 1vh 5vw;
+	padding: 2vw;
+	border-radius: 10px;
+	background-color: rgb(172,171,202);
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-box .red {
+	background-color: rgb(245,171,171);
+	background-image: linear-gradient(rgb(238,104,104), rgb(238,104,104));
+	background-size: 100% 0;
+	background-repeat: no-repeat;
+	transition: 0.5s;
+	background-position: bottom;
+}
+
+.content-box .left {
+	background-image: linear-gradient(#68689F, #68689F);
+	background-size: 0 100%;
+	background-repeat: no-repeat;
+	transition: 0.5s;
+	background-position: right;
+}
+
+.content-box .right {
+	background-image: linear-gradient(#68689F, #68689F);
+	background-size: 0 100%;
+	background-repeat: no-repeat;
+	transition: 0.5s;
+	background-position: left;
+}
+
+.content-box .content:hover {
+	background-size: 100% 100%;
+}
+
+.content-box .content:hover > h1 {
+	opacity: 0;
+}
+
+.content-box .content > a {
+	position: absolute;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 1.75vw;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.content-box .content:hover > a {
+	opacity: 1;
 }
